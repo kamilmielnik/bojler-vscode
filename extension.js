@@ -6,6 +6,11 @@ exports.activate = (context) => {
   console.log('Bojler extension is active.');
 
   var disposable = vscode.commands.registerCommand('extension.bojler', async (commandContext) => {
+    if (typeof commandContext === 'undefined') {
+      await vscode.window.showErrorMessage('commandContext is undefined');
+      return;
+    }
+
     const templates = await getTemplates();
 
     if (templates.length === 0) {
@@ -25,6 +30,10 @@ exports.activate = (context) => {
     const name = await vscode.window.showInputBox({
       prompt: 'Enter component name',
     });
+
+    if (typeof name === 'undefined') {
+      return;
+    }
 
     const folderPath = resolvePath(path.join(commandContext.path, name));
 
