@@ -1,0 +1,48 @@
+{
+  "name": "bojler-vscode",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=16.0.0",
+    "vscode": "^1.72.2"
+  },
+  "license": "MIT",
+  "displayName": "Bojler",
+  "description": "Bojler Extension for Visual Studio Code",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "boil",
+    "boiler",
+    "boilerplate",
+    "generator",
+    "snippets"
+  ],
+  "main": "./extension",
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "title": "Bojler",
+        "command": "extension.bojler"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "extension.bojler",
+          "group": "explorer-context-menu-command"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "vscode": "^1.72.2"
+  }
+}
