@@ -7,7 +7,7 @@ This extension is powered by [Bojler](https://github.com/kamilmielnik/bojler).
 ## Installation
 
 ```Shell
-git clone https://github.com/kamilmielnik/bojler-vscode ~/.vscode/extensions/bojler-vscode
+git clone git@github.com:kamilmielnik/bojler-vscode.git ~/.vscode/extensions/bojler-vscode
 ```
 
 ## Setup
