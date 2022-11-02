@@ -16,4 +16,4 @@ Follow setup instructions for Bojler: https://github.com/kamilmielnik/bojler#set
 
 ## Usage
 
-Right-click on folder in folder explorer and choose "Bojler".
+Right-click on any folder in the [Explorer](https://code.visualstudio.com/docs/getstarted/userinterface#_explorer) and choose "Bojler".
