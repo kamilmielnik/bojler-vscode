@@ -8,6 +8,8 @@ This extension is powered by [Bojler](https://github.com/kamilmielnik/bojler).
 
 ```Shell
 git clone git@github.com:kamilmielnik/bojler-vscode.git ~/.vscode/extensions/bojler-vscode
+cd ~/.vscode/extensions/bojler-vscode
+npm install
 ```
 
 ## Setup
