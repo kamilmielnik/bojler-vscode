@@ -1,13 +1,9 @@
 {
   "name": "bojler-vscode",
   "version": "0.0.1",
-  "engines": {
-    "node": ">=16.0.0",
-    "vscode": "^1.72.2"
-  },
-  "license": "MIT",
   "displayName": "Bojler",
   "description": "Bojler Extension for Visual Studio Code",
+  "main": "./extension",
   "categories": [
     "Other"
   ],
@@ -18,7 +14,23 @@
     "generator",
     "snippets"
   ],
-  "main": "./extension",
+  "engines": {
+    "node": ">=16.0.0",
+    "vscode": "^1.72.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamilmielnik/bojler-vscode.git"
+  },
+  "author": {
+    "name": "Kamil Mielnik",
+    "email": "kamil@kamilmielnik.com",
+    "url": "https://kamilmielnik.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kamilmielnik/bojler-vscode/issues"
+  },
   "activationEvents": [
     "*"
   ],
