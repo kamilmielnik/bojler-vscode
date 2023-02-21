@@ -18,6 +18,7 @@
     "node": ">=16.0.0",
     "vscode": "^1.72.2"
   },
+  "publisher": "Kamil Mielnik",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kamilmielnik/bojler-vscode.git"
