@@ -8,14 +8,17 @@
     "Other"
   ],
   "keywords": [
+    "bojler",
     "boil",
     "boiler",
     "boilerplate",
     "generator",
-    "snippets"
+    "generate",
+    "snippets",
+    "vscode"
   ],
   "engines": {
-    "node": ">=16.0.0",
+    "node": ">=16",
     "vscode": "^1.72.2"
   },
   "publisher": "Kamil Mielnik",
