@@ -1,5 +1,4 @@
-const { boil, BOILER_DIRECTORY, getTemplates, resolvePath } = require('bojler');
-const path = require('path');
+const { boil, BOILER_DIRECTORY, getTemplates, readTemplate } = require('../bojler');
 const vscode = require('vscode');
 
 exports.activate = (context) => {
@@ -18,26 +17,23 @@ exports.activate = (context) => {
       return;
     }
 
-    const template = await vscode.window.showQuickPick(templates, {
+    const templateFilename = await vscode.window.showQuickPick(templates, {
       canPickMany: false,
       title: 'Choose template',
     });
 
-    if (typeof template === 'undefined') {
+    if (typeof templateFilename === 'undefined') {
       return;
     }
 
-    const name = await vscode.window.showInputBox({
-      prompt: 'Enter component name',
-    });
+    const template = readTemplate(templateFilename);
+    const parameters = {};
 
-    if (typeof name === 'undefined') {
-      return;
+    for (const [name, prompt] of Object.entries(template.parameters)) {
+      parameters[name] = await vscode.window.showInputBox({ prompt });
     }
 
-    const folderPath = resolvePath(path.join(commandContext.path, name));
-
-    await boil(template, folderPath);
+    await boil(templateFilename, commandContext.path, parameters);
   });
 
   context.subscriptions.push(disposable);
